@@ -10,6 +10,7 @@ https://github.com/rub-hgi/ConditionsLib
 #include <cstdint>
 #include <ostream>
 #include <vector>
+#include <algorithm>
 
 /// Class for storing a vectorial Boolean function
 class VectorialBooleanFunction {

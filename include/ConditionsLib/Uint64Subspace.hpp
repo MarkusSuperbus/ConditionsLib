@@ -10,6 +10,7 @@ https://github.com/rub-hgi/ConditionsLib
 #include <numeric>
 
 #include "basic_linear_algebra.hpp"
+#include <algorithm>
 #include <NTL/mat_GF2.h>
 
 /// Subspaces of GF(2)^n represented by the binary representation of some

@@ -11,6 +11,7 @@ https://github.com/rub-hgi/ConditionsLib
 #include <bit>
 #include <cassert>
 #include <vector>
+#include <cstdint>
 
 #include <NTL/mat_GF2.h>
 
