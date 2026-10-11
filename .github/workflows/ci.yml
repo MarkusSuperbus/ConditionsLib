@@ -18,3 +18,18 @@ jobs:
 
       - name: Run pre-commit hooks on PR changes
         run: pre-commit run --from-ref origin/${{ github.base_ref }} --to-ref HEAD --show-diff-on-failure
+  build-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: sudo apt-get install libgtest-dev libntl-dev libgmp-dev
+      - name: Setup CMake
+        uses: jwlawson/actions-setup-cmake@v2
+        with:
+          cmake-version: '4.4.4'
+      - name: Build Project
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build
+      - name: Run tests
+        run: ctest --test-dir=build
