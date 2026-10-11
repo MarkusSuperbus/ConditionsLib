@@ -28,8 +28,7 @@ TreeSearch(const VectorialBooleanFunction &fun,
            int level, bool print = true);
 
 /// Starts search for size-minimal tree.
-/** Finds optimal (lowest average path length) tree representing a given
- * function.
+/** Finds optimal (size-minimal) tree representing a given function.
  * \param fun Target function.
  * \param print If set to true, outputs the trees improving
  * the internal size bound.
