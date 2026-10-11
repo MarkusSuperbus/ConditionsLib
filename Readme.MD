@@ -7,18 +7,23 @@ and is published alongside the 2021 Asiacrypt paper "Generic Framework for Key-G
 
 We tested the library with the following dependencies on a Linux machine:
 
-| Dependency                           | Version tested |
-|--------------------------------------|----------------|
-| [gcc] (https://gcc.gnu.org)          | 11.1.0         |
-| [cmake] (https://cmake.org)          | 3.21.2         |
-| [NTL] (https://libntl.org)           | 11.5.2         |
-| [GMP] (https://gmplib.org)           | 6.2.1          |
-| [openmp*] (https://openmp.llvm.org/) | 12.0.1         |
-| [doxygen**] (https://www.doxygen.nl) | 1.9.2          |
+| Dependency                                             | Version tested |
+|--------------------------------------------------------|----------------|
+| [gcc] (https://gcc.gnu.org)                            | 13.3.0         |
+| [cmake] (https://cmake.org)                            | 4.4.4          |
+| [NTL] (https://libntl.org)                             | 11.5.2         |
+| [GMP] (https://gmplib.org)                             | 6.3.0          |
+| [openmp*] (https://openmp.llvm.org/)                   | 18.0.          |
+| [doxygen**] (https://www.doxygen.nl)                   | 1.9.8          |
+| [googletest***] (https://github.com/google/googletest) |                |
 
-where the dependencies marked with a * are only necessary for compiling all of the examples,
-those with ** are only necessary for building the documentation.
-We make use of gcc's C++20-support (mainly for std::popcount).
+- *: only necessary for compiling all of the examples.
+- **: only necessary for building the documentation.
+- ***: only necessary for unit tests.
+
+We compile for C++23.
+
+Other configurations may work but are untested.
 
 # Building the Library
 

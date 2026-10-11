@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 4.4.4)
 project(ConditionsLib VERSION 0.1.0)
 
 include_directories(include)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 
 # The macro trick is taken from:
 # https://github.com/boostcon/cppnow_presentations_2017/blob/master/05-19-2017_friday/effective_cmake__daniel_pfeifer__cppnow_05-19-2017.pdf
@@ -15,8 +15,12 @@ macro(find_package)
   endif()
 endmacro()
 
+find_package(GTest REQUIRED)
+enable_testing()
+
 add_subdirectory(src)
 add_subdirectory(examples)
+add_subdirectory(tests)
 
 include(CMakePackageConfigHelpers)
 configure_package_config_file(

@@ -1,3 +1,4 @@
 bin/*
 !doc/*.pdf
 build/*
+compile_commands.json
